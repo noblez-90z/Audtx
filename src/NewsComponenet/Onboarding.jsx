@@ -31,7 +31,7 @@ export default function BallDropAnimation() {
   useEffect(() => {
     // Simulate data fetching with a delay
     setTimeout(() => {
-      navigate("/SignIn");
+      navigate("/Welcome");
     }, 4000); // 4 seconds delay
   }, []);
 
