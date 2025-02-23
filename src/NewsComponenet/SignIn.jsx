@@ -3,10 +3,8 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Login } from "./UserSlice";
 import { Link, useNavigate } from "react-router-dom";
-
 import eye from "../assets/eye.svg";
 import eyeOff from "../assets/EyeOff.svg";
-
 import Google from "../assets/Google.svg";
 import Apple from "../assets/Vector.svg";
 
