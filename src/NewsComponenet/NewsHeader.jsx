@@ -24,6 +24,7 @@ const NewsHeader = () => {
     const title = typeof item.title === "string" ? item.title : "";
     return title.toLowerCase().includes(query.toLowerCase());
   });
+  const { user } = useSelector((state) => state.user);
 
   return (
     <div className="md:px-8  py-2">
@@ -61,8 +62,15 @@ const NewsHeader = () => {
             <img src={funel} alt="" />
           </div>
         </div>
-        <div className="">
-          <img src={bell} alt="" />
+        <div className="relative">
+          <Link to="/notification">
+            <img src={bell} alt="" className="w-8" />
+            {user.notifications.length > 0 && (
+              <span className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full  w-4 h-4">
+                {/* {user.notifications.length} */}
+              </span>
+            )}
+          </Link>
         </div>
       </div>
       <div className="notification"></div>

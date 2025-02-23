@@ -8,6 +8,8 @@ import Arrowright from "../assets/ArrowLineUpRight.svg";
 import dotThree from "../assets/DotsThree.svg";
 import { useEffect, useState } from "react";
 import SkeletonLoading from "./SkeletonLoaing";
+import { addNotification } from "./UserSlice";
+import Notification from "./Notification";
 
 const RecentNews = () => {
   const recentNews = useSelector((state) =>
@@ -65,6 +67,18 @@ const RecentNews = () => {
       setLoading(false);
     }, 4000); // 4 seconds delay
   }, []);
+  //sending Notification
+
+  // const { user } = useSelector((state) => state.user);
+  const handleSendNotification = (message) => {
+    const newNotification = {
+      id: Date.now(),
+      message,
+      read: false,
+    };
+    dispatch(addNotification(newNotification));
+  };
+
   return (
     <div className="mt-5">
       <h2 className="text-lg font-semibold mb-4">Recent News</h2>
@@ -126,7 +140,13 @@ const RecentNews = () => {
                     onClick={() => dispatch(upvoteNews(news.id))}
                     className="text-green-500  px-2 flex items-center  bg-[#454545] rounded-xl space-x-2 "
                   >
-                    <img src={ArrowUp} alt="" />
+                    <img
+                      src={ArrowUp}
+                      alt=""
+                      onClick={() =>
+                        handleSendNotification("Your post was liked!")
+                      }
+                    />
                     <p>upvote</p>
                     <span
                       className=" h-5 bg-[#D1D1D1] 
@@ -161,6 +181,7 @@ const RecentNews = () => {
           ))}
         </div>
       )}
+
       {/* <div className="">
         <h2>news</h2>
         {news.map((news) => (

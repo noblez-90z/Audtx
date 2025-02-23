@@ -24,7 +24,7 @@ const initialState = {
       comments: [],
     },
     {
-      id: 3,
+      id: "3",
       title: "diff",
       text: "wertyuiousut",
       image: police,
@@ -33,7 +33,7 @@ const initialState = {
       comments: [],
     },
     {
-      id: 4,
+      id: "4",
       title: "for",
       text: "wertyuiousut",
       image: protest,
@@ -43,7 +43,7 @@ const initialState = {
     },
   ],
   Trending: ["1", "2"], //both string and number id working fine
-  Recent: [3, 4],
+  Recent: ["3", "4"],
 };
 const NewsSlice = createSlice({
   name: "News",

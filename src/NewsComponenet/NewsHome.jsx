@@ -5,7 +5,7 @@ import TrendingNews from "./TrendingNews";
 
 const NewsHome = () => {
   return (
-    <div className="px-6 md:px-16 bg-[#121212] text-white">
+    <div className="px-6 md:px-16 bg-[#121212] text-white ">
       <NewsHeader />
       <TrendingNews />
       <RecentNews />
