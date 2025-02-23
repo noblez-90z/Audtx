@@ -7,7 +7,7 @@ import chatdot from "../assets/ChatDots.svg";
 import arrowup from "../assets/ArrowFatLinesUp.svg";
 import arrowdown from "../assets/ArrowFatLinesDown.svg";
 import arrowline from "../assets/ArrowLineUpRight.svg";
-import Arrowup from "../assets/ArrowUp.svg";
+
 import send from "../assets/send.svg";
 
 // import { addComment } from '../store/newsSlice';

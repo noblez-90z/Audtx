@@ -9,7 +9,6 @@ import dotThree from "../assets/DotsThree.svg";
 import { useEffect, useState } from "react";
 import SkeletonLoading from "./SkeletonLoaing";
 import { addNotification } from "./UserSlice";
-import Notification from "./Notification";
 
 const RecentNews = () => {
   const recentNews = useSelector((state) =>
