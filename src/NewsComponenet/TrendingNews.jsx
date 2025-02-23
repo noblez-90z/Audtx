@@ -6,7 +6,7 @@ import Dot from "../assets/ChatDots.svg";
 import ArrowUp from "../assets/ArrowFatLinesUp.svg";
 import ArrowDown from "../assets/ArrowFatLinesDown.svg";
 import { useEffect, useState } from "react";
-import "../app.css";
+
 import SkeletonLoading from "./SkeletonLoaing";
 
 const TrendingNews = () => {
